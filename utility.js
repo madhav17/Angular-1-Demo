@@ -5,7 +5,7 @@
 //    console.log(person);
 //}
 
-// creating a namespace or global variable
+// creating a namespace or global scope,container
 
 var objectApp = {};
 
