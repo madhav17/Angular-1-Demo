@@ -1,14 +1,14 @@
-var myApp = angular.module('myApp',[]);
+var things = [1,2,3,4,5];
+var things1 = ['1',2,'3',4,50.2];
 
-myApp.controller('mainController', function($scope){
-
-    console.log($scope);
-});
-
-var searchPeople = function (firstName,$scope,height,age,occupation){
+var things2 = [1,'2',function(){
     
-    
-    return "Madhav"
-}
+    alert("Hello");
+}]
 
-console.log(angular.injector().annotate(searchPeople));
+console.log(things);
+console.log(things1);
+
+things2[2]();
+
+console.log(things2);
