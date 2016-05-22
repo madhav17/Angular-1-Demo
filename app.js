@@ -1,15 +1,15 @@
-var Person = function(firstName,lastName){
-    this.firstName = firstName;
-    this.lastName = lastName;
-}
+var myApp = angular.module('myApp',[]);
 
-function logPerson(john){
-    // it dependency 
-    // so we use dependency injection
-//    var john = new Person("John","Doe");
-    console.log(john);
-}
+myApp.controller('mainController', function($scope){
 
-var john = new Person("John","Doe");
-// now this dependency injection becoz we are passing it and it is not dependent
-logPerson(john);
+    $scope.firstName="Madhav";
+    $scope.lastName="Khanna";
+    $scope.occupation="Code";
+    
+    
+    $scope.getFullName =  function(){
+        return $scope.firstName + " " + $scope.lastName;
+    }
+    console.log($scope);
+    console.log($scope.getFullName());
+});
