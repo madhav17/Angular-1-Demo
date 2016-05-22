@@ -1,14 +1,25 @@
-var things = [1,2,3,4,5];
-var things1 = ['1',2,'3',4,50.2];
+var myApp = angular.module('myApp',['ngMessages','ngResource']);
+//var myApp = angular.module('myApp',['ngMessages']);
 
-var things2 = [1,'2',function(){
+myApp.controller('mainController', function($log,$scope,$http,$filter,$resource){
+
+    $scope.name="Madhav";
+    $scope.formattedName=$filter('uppercase')($scope.name);
     
-    alert("Hello");
-}]
+    console.log($scope);
+    console.log($log);
+    console.log($http);
+    
+    $log.log("Hello");
+    $log.info("Hello");
+    $log.warn("Hello");
+    $log.debug("Hello");
+    
+    console.log($http);
+    console.log($resource);
+    $log.info($scope.formattedName);
+    
+    
 
-console.log(things);
-console.log(things1);
+});
 
-things2[2]();
-
-console.log(things2);
